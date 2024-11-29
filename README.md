@@ -1,34 +1,3 @@
-# aulas-frontend-pwa
+# Agenda Ai!
 
-Aulas de frontend(ReacJS) + PWA ministrada na dissiciplina Programação de Aplicativos da 2ª fase 2024/2 do curso técnico em programação do SENAI/SC.
-
-## Rodando localmente
-
-Clone o projeto:
-
-```bash
-  git clone https://github.com/thiagocordeirooo/aulas-frontend-senai.git
-```
-
-Entre no diretório do projeto:
-
-```bash
-  cd aulas-frontend-pwa
-```
-
-Instale as dependências:
-
-```bash
-  npm install
-
-  ou 
-
-  npm i
-```
-
-Inicie o servidor localmente:
-
-```bash
-  npm run dev
-```
-
+Facilidade para agendamentos da sua lavação automotiva! Você, dono da empresa faz o seu cadastro e cadastra seu cliente. Depois anota o agendamento do mesmo, aparecendo nome, data e hora na pagina inicial para você não esquecer.
