@@ -1,6 +1,6 @@
 .cabecalho_root {
   height: 48px;
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-cinza);
   display: flex;
   justify-content: space-between;
   align-items: center;

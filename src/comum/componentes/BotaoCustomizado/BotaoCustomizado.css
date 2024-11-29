@@ -14,13 +14,13 @@
 }
 
 .botao-customizado_primario {
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-primaria-clara);
 }
 
 .botao-customizado_secundario {
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor-secundaria-clara);
 }
 
 .botao-customizado_padrao {
-  background-color: var(--cor-cinza);
+  background-color: var(--cor-primaria-escura);
 }
