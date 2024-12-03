@@ -20,7 +20,6 @@ const PaginaCadastroCliente = () => {
   const [celular, setCelular] = useState("");
   const [veiculo, setVeiculo] = useState("");
   const [placa, setPlaca] = useState("");
-  const [servico, setServico] = useState("");
 
   useEffect(() => {
     if (params.id) {
@@ -30,7 +29,6 @@ const PaginaCadastroCliente = () => {
         setVeiculo(clienteEncontrado.veiculo);
         setCelular(clienteEncontrado.celular);
         setPlaca(clienteEncontrado.placa);
-        setServico(clienteEncontrado.servico);
       }
     }
   }, [params.id]);
@@ -46,7 +44,6 @@ const PaginaCadastroCliente = () => {
       veiculo,
       celular,
       placa,
-      servico,
     };
     if (params.id) {
       instanciaServicoCliente.editarCliente(cliente);
@@ -69,10 +66,10 @@ const PaginaCadastroCliente = () => {
       )}
 
       <div className="campo">
-        <label>Nome:</label>
+        <label>Nome completo:</label>
         <input
           type="text"
-          placeholder="Digite o nome"
+          placeholder="Digite o nome completo"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
         />
@@ -107,16 +104,6 @@ const PaginaCadastroCliente = () => {
           onChange={(e) =>
             setCelular(formatarComMascara(e.target.value, MASCARA_CELULAR))
           }
-        />
-      </div>
-
-      <div className="campo">
-        <label>Serviço:</label>
-        <input
-          type="text"
-          placeholder="Serviço a ser feito"
-          value={servico}
-          onChange={(e) => setServico(e.target.value)}
         />
       </div>
 
