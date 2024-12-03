@@ -1,0 +1,8 @@
+.meus-agendamentos_campo {
+  background-color: var(--cor-texto-claro);
+  padding: 8px;
+  box-shadow: 0px 0px 5px 0px gray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { FaEdit, FaTrash } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
-import Principal from '../../comum/componentes/Principal/Principal';
-import ServicoCliente from '../../comum/servicos/ServicoCliente';
-import './PaginaListaClientes.css';
+import { useEffect, useState } from "react";
+import { FaEdit, FaTrash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import Principal from "../../comum/componentes/Principal/Principal";
+import ServicoCliente from "../../comum/servicos/ServicoCliente";
+import "./PaginaListaClientes.css";
 
 const instanciaServicoCliente = new ServicoCliente();
 
@@ -12,8 +12,7 @@ const PaginaListaClientes = () => {
   const [listaClientes, setListaClientes] = useState([]);
 
   useEffect(() => {
-    const clientesDoLocalStorage =
-      instanciaServicoCliente.listar();
+    const clientesDoLocalStorage = instanciaServicoCliente.listar();
     setListaClientes(clientesDoLocalStorage);
   }, []);
 
@@ -22,32 +21,21 @@ const PaginaListaClientes = () => {
   };
 
   const excluir = (idCliente) => {
-    if (confirm('Tem certeza?')) {
-      const listaAtualizada =
-        instanciaServicoCliente.excluirCliente(idCliente);
+    if (confirm("Tem certeza?")) {
+      const listaAtualizada = instanciaServicoCliente.excluirCliente(idCliente);
       setListaClientes(listaAtualizada);
     }
   };
 
   return (
-    <Principal titulo="Lista de Clientes" voltarPara="/">
-      <Link to="/cadastro-cliente">Novo</Link>
-
+    <Principal titulo="Meus Clientes" voltarPara="/">
       {listaClientes.map((cliente) => {
         return (
-          <div
-            key={cliente.id}
-            className="pagina-lista-clientes__item-cliente"
-          >
+          <div key={cliente.id} className="pagina-lista-clientes__item-cliente">
             {cliente.nome}
 
             <div className="pagina-lista-clientes__item-cliente-acoes">
-              <FaEdit
-                size={24}
-                onClick={() =>
-                  navegarParaEdicao(cliente.id)
-                }
-              />
+              <FaEdit size={24} onClick={() => navegarParaEdicao(cliente.id)} />
 
               <FaTrash
                 size={24}

@@ -1,14 +1,18 @@
 .principal_root {
   background-color: var(--cor-fundo-padrao);
   padding: 16px;
-
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
+  gap: 10px;
 
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.principal_root {
+  scroll-snap-align: star;
+}
 .principal_titulo {
   display: flex;
+  justify-content:space-between;
   align-items: center;
-  gap: 8px;
 }

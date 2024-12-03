@@ -12,7 +12,7 @@ function Principal({ voltarPara, titulo, children }) {
         <div className="principal_titulo">
           {voltarPara && (
             <Link to={voltarPara}>
-              <FaChevronLeft size={24} color="#3f50b5" />
+              <FaChevronLeft size={20} color="#3f50b5" />
             </Link>
           )}
 

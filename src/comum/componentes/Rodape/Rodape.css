@@ -2,6 +2,6 @@
   height: 48px;
   background-color: var(--cor-cinza);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
