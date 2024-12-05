@@ -29,7 +29,6 @@ const PaginaCadastroCliente = () => {
         setVeiculo(clienteEncontrado.veiculo);
         setCelular(clienteEncontrado.celular);
         setPlaca(clienteEncontrado.placa);
-
       }
     }
   }, [params.id]);
@@ -67,7 +66,7 @@ const PaginaCadastroCliente = () => {
       )}
 
       <div className="campo">
-        <label>Nome Completo:</label>
+        <label>Nome:</label>
         <input
           type="text"
           placeholder="Digite o nome completo"
