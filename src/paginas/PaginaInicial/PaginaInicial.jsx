@@ -3,12 +3,12 @@ import Principal from "../../comum/componentes/Principal/Principal";
 import "./PaginaInicial.css";
 import ServicoCliente from "../../comum/servicos/ServicoCliente.js";
 import { useEffect, useState } from "react";
-// import { FaTrash } from "react-icons/fa6";
+
 
 const instanciaServicoCliente = new ServicoCliente(); 
 
 const PaginaInicial = () => {
-  // const navigate = useNavigate();
+
   const [listaAgendamentos, setListaAgendamentos] = useState([]);
 
   useEffect(() => {
@@ -40,12 +40,12 @@ const PaginaInicial = () => {
               <strong>Placa: </strong>
               {cliente.placa}
             </span>
-            <span>
+            {/* <span>
               <strong>Serviço: </strong>
               {cliente.servico}
-            </span>
+            </span> */}
 
-            <BotaoCustomizado aoClicar={excluir} >Lavação Concluida</BotaoCustomizado>
+            <BotaoCustomizado aoClicar={() => excluir(cliente.id)} >Lavação Concluida</BotaoCustomizado>
             {/* <FaTrash color="green" size={15} onClick={excluir} /> */}
 
           </div>
